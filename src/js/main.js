@@ -3,20 +3,56 @@ var myUI = {
 		var dH = createEle("div"),
 		    header = createEle("header"),
 		    section = createEle("section"),
-		    footer = createEle("footer");
+		    footer = createEle("footer"),
+		    navBar = createEle("div"),
+		    mainArea = createEle("div");
         
-        header.innerHTML = "THE MASK SITE";
+        navBar.className = "navBar";
+        myUI.generateNavItems(navBar);
+
+        mainArea.className = "mainArea";
+        myUI.generateMainItems(mainArea);
+
+        header.innerHTML = "THE SITE";
         
-        section.innerHTML = "-THE MASK SECTION-";
+        section.append(navBar);
+        section.append(mainArea);
 
-        footer.innerHTML = "n   EHAWK 2019 LLC";
-
+        footer.innerHTML = "EHAWK 2019 LLC";
 
         dH.append(header);
         dH.append(section);
         dH.append(footer);
 
 		dvContain.append(dH); 
+	},
+	generateNavItems: (navBar) => {
+        var navToggleBtn = createEle("button");
+        
+        navToggleBtn.innerHTML = "&#9776;";
+        navToggleBtn.className = "navToggleBtn";
+        navToggleBtn.onclick = myUI.navToggleFunc(navToggleBtn, navBar);
+
+        navBar.append(navToggleBtn);
+	},
+	generateMainItems: (mainArea) => {
+		var mainAreaStuff = createEle("div");
+
+		mainAreaStuff.className = "mainAreaStuff";
+		mainAreaStuff.innerHTML = "jdfhsdaf";
+
+		mainArea.append(mainAreaStuff);
+	},
+	navToggleFunc: (navToggleBtn, navBar) => {
+		return () => {
+			if (navBar.className === "navBar") {
+				makeFull(navBar);
+				makeFull(navToggleBtn);
+			}else if (navBar.className === "navBar_full") {
+				takeFull(navBar);
+				takeFull(navToggleBtn);
+			}
+		}
 	}
 };
 window.onload = () => {
