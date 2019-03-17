@@ -9,7 +9,7 @@ var myUI = {
         
         navBar.className = "navBar";
         myUI.generateNavItems(navBar);
-
+        
         mainArea.className = "mainArea";
         myUI.generateMainItems(mainArea);
 
@@ -18,7 +18,7 @@ var myUI = {
         section.append(navBar);
         section.append(mainArea);
 
-        footer.innerHTML = "EHAWK 2019 LLC";
+        footer.innerHTML = "EHAWK LLC &copy; 2019";
 
         dH.append(header);
         dH.append(section);

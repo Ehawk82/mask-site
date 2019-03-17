@@ -41,9 +41,9 @@ footer {
 	padding: 5px 0;
 	bottom:0;
     left:0;
-	background-color: rgba(25,255,55,.4);
+	background-color: rgba(25,255,55,1);
     text-align: center;
-    z-index:1;
+    z-index:5;
 }
 button {
 	border:none;
@@ -78,22 +78,30 @@ button:active {
 
 	margin-top: 1px;
 	margin-right: -53px;
+
 }
 .navToggleBtn_full {
 	transition: 500ms margin-right;
 	float:right;
 	width:50px;
 	height:50px;
-
 	margin-top: 1px;
 	margin-right: 1px;
 }
-
+.mainArea {
+	background-color: pink;
+	width: 100%;
+	height: -webkit-fill-available;
+	position: relative;
+	top:-100vh;
+    left:54px;
+}
+.mainAreaStuff {
+background-color: pink;
+}
 /*MULTIS*/
 header {
-	-webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
