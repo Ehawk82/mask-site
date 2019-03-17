@@ -36,12 +36,23 @@ var myUI = {
         navBar.append(navToggleBtn);
 	},
 	generateMainItems: (mainArea) => {
-		var mainAreaStuff = createEle("div");
+		var mainAreaStuff = createEle("div"),
+		    mainAreaStuff2 = createEle("div"),
+		    mainAreaStuff3 = createEle("div");
+
+        mainAreaStuff3.className = "mainAreaStuff3";
+		mainAreaStuff3.innerHTML = "&nbsp;";
+
+		mainAreaStuff2.className = "mainAreaStuff2";
+		mainAreaStuff2.innerHTML = "This is the area for secondary stuffs";
 
 		mainAreaStuff.className = "mainAreaStuff";
-		mainAreaStuff.innerHTML = "jdfhsdaf";
+		mainAreaStuff.innerHTML = "This is the area for primary stuffs";
 
 		mainArea.append(mainAreaStuff);
+		mainArea.append(mainAreaStuff2);
+		mainArea.append(mainAreaStuff3);
+
 	},
 	navToggleFunc: (navToggleBtn, navBar) => {
 		return () => {

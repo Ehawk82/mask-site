@@ -20,7 +20,7 @@ header {
 	padding: 5px 0;
 	top:0;
     left:0;
-	font-size: 4vh;
+	font-size: 32px;
     text-indent: 25px;
 	line-height:50px;
 }
@@ -30,19 +30,20 @@ section {
 	padding: 0;
 	top:60px;
     left:0;
-	font-size: 2.5vh;
+	font-size: 18px;
 	height:-webkit-fill-available;
     z-index:2;
 
 }
 footer {
 	position: fixed;
-	font-size: 1.5vh;
+	font-size: 12px;
 	padding: 5px 0;
 	bottom:0;
     left:0;
 	background-color: rgba(25,255,55,1);
     text-align: center;
+	font-weight: 700;
     z-index:5;
 }
 button {
@@ -58,16 +59,18 @@ button:active {
 	transition: 500ms all;
 	position: relative;
 	background-color: limegreen;
+	display: table-cell;
 	width:52px;
-    height: -webkit-fill-available;
+    height: 100vh;
     left:-53px;
 }
 .navBar_full {
 	transition: 500ms all;
 	position: relative;
 	background-color: limegreen;
+	display: table-cell;
 	width:52px;
-    height: -webkit-fill-available;
+    height: 100vh;
     left:1px;
 }
 .navToggleBtn {
@@ -89,16 +92,37 @@ button:active {
 	margin-right: 1px;
 }
 .mainArea {
-	background-color: pink;
-	width: 100%;
+	background-color: slategrey;
+	width: -webkit-fill-available;
 	height: -webkit-fill-available;
 	position: relative;
-	top:-100vh;
+    display: flex;
+    float: left;
+    padding: 0;
     left:54px;
+    text-align:center;
+    
+}
+.mainAreaStuff, .mainAreaStuff2, .mainAreaStuff3 {
+    background-color: white;
+    float: left;
+    display: flex;
 }
 .mainAreaStuff {
-background-color: pink;
+    flex:5;
+    background-color: pink;
 }
+.mainAreaStuff2 {
+    flex:4;
+    background-color: orange;
+
+}
+.mainAreaStuff3 {
+    flex:1;
+    background-color: slategrey;
+
+}
+
 /*MULTIS*/
 header {
     -webkit-user-select: none;
