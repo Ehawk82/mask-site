@@ -26,25 +26,21 @@ header {
 }
 section {
 	position: fixed;
-	box-shadow: 0 0 2px silver;
+	box-shadow: 0 0 20px silver inset;
 	padding: 0;
 	top:60px;
     left:0;
 	font-size: 18px;
 	height:-webkit-fill-available;
-    z-index:2;
-
 }
 footer {
 	position: fixed;
-	font-size: 12px;
+	font-size: 8px;
 	padding: 5px 0;
 	bottom:0;
     left:0;
 	background-color: rgba(25,255,55,1);
     text-align: center;
-	font-weight: 700;
-    z-index:5;
 }
 button {
 	border:none;
@@ -55,73 +51,8 @@ button:active {
 	background-color: rgba(180,230,180,1);
 }
 /*CLASS*/
-.navBar {
-	transition: 500ms all;
-	position: relative;
-	background-color: limegreen;
-	display: table-cell;
-	width:52px;
-    height: 100vh;
-    left:-53px;
-}
-.navBar_full {
-	transition: 500ms all;
-	position: relative;
-	background-color: limegreen;
-	display: table-cell;
-	width:52px;
-    height: 100vh;
-    left:1px;
-}
-.navToggleBtn {
-	transition: 500ms margin-right;
-	float:right;
-	width:50px;
-	height:50px;
 
-	margin-top: 1px;
-	margin-right: -53px;
-
-}
-.navToggleBtn_full {
-	transition: 500ms margin-right;
-	float:right;
-	width:50px;
-	height:50px;
-	margin-top: 1px;
-	margin-right: 1px;
-}
-.mainArea {
-	background-color: slategrey;
-	width: -webkit-fill-available;
-	height: -webkit-fill-available;
-	position: relative;
-    display: flex;
-    float: left;
-    padding: 0;
-    left:54px;
-    text-align:center;
-    
-}
-.mainAreaStuff, .mainAreaStuff2, .mainAreaStuff3 {
-    background-color: white;
-    float: left;
-    display: flex;
-}
-.mainAreaStuff {
-    flex:5;
-    background-color: pink;
-}
-.mainAreaStuff2 {
-    flex:4;
-    background-color: orange;
-
-}
-.mainAreaStuff3 {
-    flex:1;
-    background-color: slategrey;
-
-}
+/*ID*/
 
 /*MULTIS*/
 header {
