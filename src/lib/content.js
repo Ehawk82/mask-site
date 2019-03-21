@@ -1,0 +1,1 @@
+navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];

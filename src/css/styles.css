@@ -10,13 +10,13 @@ body {
 	width:100%;
 }
 header, section, footer {
-	width:100%;
+	width:-webkit-fill-available;
 	margin:none;
 }
 header {
 	position: fixed;
+	background-color: rgba(178,164,112,.7);
 	box-shadow: 0 0 2px silver;
-	background-color: rgba(25,255,55,.4);
 	padding: 5px 0;
 	top:0;
     left:0;
@@ -35,25 +35,47 @@ section {
 }
 footer {
 	position: fixed;
-	font-size: 8px;
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 1px;
 	padding: 5px 0;
 	bottom:0;
-    left:0;
-	background-color: rgba(25,255,55,1);
-    text-align: center;
+    left:100px;
+    text-indent: 5px;
+	background-color: rgba(178,164,112,.7);
 }
 button {
 	border:none;
 	outline-style: none;
-	background-color: rgba(200,250,200,1);
-}
-button:active {
-	background-color: rgba(180,230,180,1);
 }
 /*CLASS*/
-
+.navBar {
+	background-color: rgba(178,164,112,.7);
+	display: -webkit-box;
+	width:100px;
+	height: -webkit-fill-available;
+}
+.navBar button {
+	width:98%;
+	line-height:50px;
+	margin:0 auto 2px auto;
+	background-color: rgba(255,246,212,1);
+}
+.navBar button:active {
+	background-color: rgba(240,230,200,1);
+}
+.mainArea {
+	position: absolute;
+	left:100px;
+	top:0;
+	background-color: #2e5;
+	width: -webkit-fill-available;
+	height: fit-content;
+}
 /*ID*/
-
+#dvContain {
+	
+}
 /*MULTIS*/
 header {
     -webkit-user-select: none;
