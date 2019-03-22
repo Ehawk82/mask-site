@@ -47,8 +47,9 @@ var myUI = {
 	},
 	doNavFunction: (btns, i) => {
 		return () => {
-
-	}
+            console.log(btns.innerHTML);
+	    }
+    }
 };
 window.onload = () => {
 	myUI.init();
