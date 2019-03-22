@@ -10,12 +10,13 @@ body {
 	width:100%;
 }
 header, section, footer {
+	transition: 200ms all;
 	width:-webkit-fill-available;
 	margin:none;
 }
 header {
 	position: fixed;
-	background-color: rgba(178,164,112,.7);
+	background-color: rgba(178,164,112,1);
 	box-shadow: 0 0 2px silver;
 	padding: 5px 0;
 	top:0;
@@ -25,56 +26,80 @@ header {
 	line-height:50px;
 }
 section {
+	display:inline-flex;
 	position: fixed;
 	box-shadow: 0 0 20px silver inset;
 	padding: 0;
 	top:60px;
     left:0;
+    bottom: 20px;
 	font-size: 18px;
-	height:-webkit-fill-available;
 }
 footer {
+	display:inline-flex;
 	position: fixed;
 	font-size: 10px;
 	font-weight: 800;
 	letter-spacing: 1px;
-	padding: 5px 0;
+	padding: 0;
+	line-height: 20px;
 	bottom:0;
-    left:100px;
+    left:0;
     text-indent: 5px;
-	background-color: rgba(178,164,112,.7);
+	background-color: rgba(178,164,112,1);
 }
 button {
 	border:none;
 	outline-style: none;
 }
+h1 {
+	margin:0;
+	width:100%;
+    padding: 0;
+    text-align: -webkit-left;
+    text-indent:15px;
+    box-shadow: 0 0 2px red inset;
+}
 /*CLASS*/
 .navBar {
-	background-color: rgba(178,164,112,.7);
+	background-color: rgba(178,164,112,.5);
 	display: -webkit-box;
 	width:100px;
 	height: -webkit-fill-available;
+	overflow: scroll;
+	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+
 }
 .navBar button {
-	width:98%;
+	width:100%;
 	line-height:50px;
-	margin:0 auto 2px auto;
+	margin:-1px auto;
 	background-color: rgba(255,246,212,1);
+	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+
 }
 .navBar button:active {
 	background-color: rgba(240,230,200,1);
 }
+.navBar::-webkit-scrollbar { width: 0 !important }
 .mainArea {
-	position: absolute;
-	left:100px;
-	top:0;
-	background-color: #2e5;
+	background-color: rgba(178,164,112,1);
 	width: -webkit-fill-available;
-	height: fit-content;
+	height: -webkit-fill-available;
+    display: flex;
+	padding: 0;
+	text-align: right;
+	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+}
+.mainItems {
+    display: flex;
 }
 /*ID*/
 #dvContain {
-	
+	display: inline-flex;
+}
+#dvContain div {
+	display: block;
 }
 /*MULTIS*/
 header {

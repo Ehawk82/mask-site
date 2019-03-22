@@ -32,14 +32,27 @@ var myUI = {
 			btns.className = "navBtns";
 			btns.id = "navBtn_" + i;
 			btns.innerHTML = navText[i];
+			btns.onclick = myUI.doNavFunction(btns, i);
 
             navBar.append(btns);
 		}
 	},
 	generateMainItems: (mainArea) => {
-        mainArea.innerHTML = "test";
+		var item1 = createEle("div");
+
+		item1.className = "mainItems";
+		item1.innerHTML = homePage[0];
+
+        mainArea.append(item1);
+	},
+	doNavFunction: (btns, i) => {
+		return () => {
+
 	}
 };
 window.onload = () => {
 	myUI.init();
+};
+window.onresize = () => {
+	location.reload();
 };
