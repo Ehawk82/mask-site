@@ -2,6 +2,7 @@
 html {
 	font-family: helvetica;
 	font-weight: 500;
+	
 }
 body {
 	margin:0;
@@ -16,8 +17,7 @@ header, section, footer {
 }
 header {
 	position: fixed;
-	background-color: rgba(178,164,112,1);
-	box-shadow: 0 0 2px silver;
+
 	padding: 5px 0;
 	top:0;
     left:0;
@@ -28,7 +28,6 @@ header {
 section {
 	display:inline-flex;
 	position: fixed;
-	box-shadow: 0 0 20px silver inset;
 	padding: 0;
 	top:60px;
     left:0;
@@ -46,36 +45,38 @@ footer {
 	bottom:0;
     left:0;
     text-indent: 5px;
-	background-color: rgba(178,164,112,1);
 }
 button {
 	border:none;
 	outline-style: none;
+	cursor: pointer;
 }
 h1 {
 	margin:0;
-	width:100%;
-    padding: 0;
-    text-align: -webkit-left;
-    text-indent:15px;
-    box-shadow: 0 0 2px red inset;
+	width:90%;
+    padding: 20px 5%;
+    text-align: -webkit-right;
+    background-color: rgba(0,0,0,0.4);
+}
+a {color:black;}
+aside {
 }
 /*CLASS*/
 .navBar {
-	background-color: rgba(178,164,112,.5);
 	display: -webkit-box;
-	width:100px;
+	min-width:100px;
+	max-width:100px;
 	height: -webkit-fill-available;
 	overflow: scroll;
-	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+	
 
 }
 .navBar button {
 	width:100%;
 	line-height:50px;
-	margin:-1px auto;
+	margin:0 auto 0.5 auto;
 	background-color: rgba(255,246,212,1);
-	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+
 
 }
 .navBar button:active {
@@ -83,16 +84,83 @@ h1 {
 }
 .navBar::-webkit-scrollbar { width: 0 !important }
 .mainArea {
-	background-color: rgba(178,164,112,1);
+	transition: 50ms all;
 	width: -webkit-fill-available;
 	height: -webkit-fill-available;
-    display: flex;
 	padding: 0;
-	text-align: right;
-	box-shadow: 0 0 1px inset black,0 0 1px inset black,0 0 1px inset black;
+	opacity: 0;
+	overflow: scroll;
+
 }
+.mainArea_full {
+	transition: 500ms all;
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+	padding: 0;
+	opacity: 1;
+	overflow: scroll;
+	
+}
+.mainArea::-webkit-scrollbar { width: 0 !important }
+.mainArea_full::-webkit-scrollbar { width: 0 !important }
+
 .mainItems {
-    display: flex;
+    position: relative;
+
+}
+.mainItems aside {
+    position: relative;
+    display: block;
+    margin:80px 30px 0 30px;
+
+    width:-webkit-fill-available;
+    line-height: 200px;
+    box-shadow: 0 0 5px black inset;
+    
+}
+.mainItems h1 {
+    width: inherit;
+
+}
+.mainItems p {
+    background-color: rgba(0,0,0,0.2);
+    padding: 30px;
+    margin:0;
+
+}
+.mainItems textarea {
+	background-color: white;
+	width: -webkit-fill-available;
+	height: 300px;
+	resize: none;
+}
+.mainItems canvas {
+	background-color: transparent;
+	display: block;
+	position: relative;
+	background-image: url(../assets/mask1.png);
+	background-repeat: no-repeat;
+	background-size: 400px 400px;
+    background-position: top center;
+	width:300px;
+	height:400px;
+	margin:0 auto;
+}
+.mainItems div {
+    background-color: rgba(0,0,0,0.4);
+    padding: 40px;
+    text-align: right;
+    margin:0;
+}
+.mainItems span {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0;
+    display: table-cell;
+    text-align: center;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
 }
 /*ID*/
 #dvContain {
@@ -100,11 +168,18 @@ h1 {
 }
 #dvContain div {
 	display: block;
+
 }
 /*MULTIS*/
-header {
+header, div, span, p {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+}
+h1 {
+	text-indent: 20px;
+}
+.mainArea, .mainArea_full, .navBar, footer, header, html {
+	background-color: rgba(178,164,112,1);
 }
