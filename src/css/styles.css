@@ -2,7 +2,6 @@
 html {
 	font-family: helvetica;
 	font-weight: 500;
-	
 }
 body {
 	margin:0;
@@ -17,7 +16,6 @@ header, section, footer {
 }
 header {
 	position: fixed;
-
 	padding: 5px 0;
 	top:0;
     left:0;
@@ -56,7 +54,7 @@ h1 {
 	width:90%;
     padding: 20px 5%;
     text-align: -webkit-right;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.2);
 }
 a {color:black;}
 aside {
@@ -68,19 +66,15 @@ aside {
 	max-width:100px;
 	height: -webkit-fill-available;
 	overflow: scroll;
-	
-
 }
 .navBar button {
-	width:100%;
+	width:-webkit-fill-available;
 	line-height:50px;
-	margin:0 auto 0.5 auto;
-	background-color: rgba(255,246,212,1);
-
-
+	margin:2px 5px;
+	background-color: rgba(255,254,234,1);
 }
 .navBar button:active {
-	background-color: rgba(240,230,200,1);
+	background-color: rgba(0,0,0,.5);
 }
 .navBar::-webkit-scrollbar { width: 0 !important }
 .mainArea {
@@ -90,7 +84,6 @@ aside {
 	padding: 0;
 	opacity: 0;
 	overflow: scroll;
-
 }
 .mainArea_full {
 	transition: 500ms all;
@@ -99,34 +92,28 @@ aside {
 	padding: 0;
 	opacity: 1;
 	overflow: scroll;
-	
 }
 .mainArea::-webkit-scrollbar { width: 0 !important }
 .mainArea_full::-webkit-scrollbar { width: 0 !important }
 
 .mainItems {
     position: relative;
-
 }
 .mainItems aside {
     position: relative;
     display: block;
     margin:80px 30px 0 30px;
-
     width:-webkit-fill-available;
     line-height: 200px;
     box-shadow: 0 0 5px black inset;
-    
 }
 .mainItems h1 {
     width: inherit;
-
 }
 .mainItems p {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
     padding: 30px;
     margin:0;
-
 }
 .mainItems textarea {
 	background-color: white;
@@ -147,13 +134,13 @@ aside {
 	margin:0 auto;
 }
 .mainItems div {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.2);
     padding: 40px;
     text-align: right;
     margin:0;
 }
 .mainItems span {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
     padding: 0;
     display: table-cell;
     text-align: center;
@@ -168,7 +155,6 @@ aside {
 }
 #dvContain div {
 	display: block;
-
 }
 /*MULTIS*/
 header, div, span, p {
@@ -180,6 +166,9 @@ header, div, span, p {
 h1 {
 	text-indent: 20px;
 }
-.mainArea, .mainArea_full, .navBar, footer, header, html {
-	background-color: rgba(178,164,112,1);
+.mainArea, .mainArea_full {
+	background-color: rgba(230,249,255,1);
+}
+.navBar, footer, header, html {
+	background-image: url(../assets/sand.jpg);
 }

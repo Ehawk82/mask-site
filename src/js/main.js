@@ -1,4 +1,6 @@
-var myUI = {
+var myUI, cv;
+
+myUI = {
 	init: () => {
 		var dH = createEle("div"),
 		    header = createEle("header"),
@@ -49,8 +51,7 @@ var myUI = {
         mainArea.append(item1);
         setTimeout(() => {
 			    makeFull(mainArea);
-
-			}, 200);
+	    }, 200);
 	},
 	doNavFunction: (btns, i, mainArea) => {
 		return () => {
@@ -76,6 +77,7 @@ var myUI = {
 			}
 			setTimeout(() => {
 			mainItems.innerHTML = x[0] + x[1] + x[2] + x[3] + x[4] + x[5];
+			cv.generateCVtool(mainItems);
 			}, 530);
 			setTimeout(() => {
 				if (mainArea.className === "mainArea_full") {
@@ -86,6 +88,16 @@ var myUI = {
 			}, 500);
 	    }
     }
+};
+
+cv = {
+	generateCVtool: (mainItems) => {
+		var canvas = createEle("canvas"), canvasDiv = bySel("#canvasDiv");
+
+//free-draw program will be developed here
+
+		canvasDiv.append(canvas);
+	}
 };
 window.onload = () => {
 	myUI.init();
