@@ -3,27 +3,26 @@
 	aside {
         display:inline-flex;
         position: relative;
-        width:200px;
+        width:250px;
         margin: 0 5px;
 	}
-
     header, section, footer {
         display:inline-flex;
     }
+    header {
+        text-indent: 25px;
+    }
     .navBar {
 	    display: -webkit-box;
-	    min-width:100px;
-	    max-width:100px;
+	    min-width:150px;
+	    max-width:150px;
 	    height: -webkit-fill-available;
     }
     .mainArea {
         height: -webkit-fill-available;
-
     }
     .mainArea_full {
         height: -webkit-fill-available;
-
-
     }
     #dvContain div {
 	    display: block;
@@ -43,6 +42,9 @@
 	}
     header, section, footer {
         display:block;
+    }
+    header {
+        text-align: center;
     }
     section {
     	overflow: scroll;
@@ -93,7 +95,7 @@ header {
 	top:0;
     left:0;
 	font-size: 32px;
-    text-indent: 25px;
+    
 	line-height:50px;
 }
 section {
@@ -129,27 +131,27 @@ h1 {
 }
 a {color:black;}
 aside {
-    
     box-shadow: 0 0 5px black inset;
 }
 /*CLASS*/
 .navBar {
-	
 	overflow: scroll;
 }
 .navBar button {
 	width:-webkit-fill-available;
-	line-height:50px;
+	line-height:60px;
 	background-color: rgba(215,224,244,1);
 }
 .navBar button:active {
 	background-color: rgba(0,0,0,.5);
 }
+.navBar button:hover {
+	background-color: rgba(255,255,255,.4);
+}
 .navBar::-webkit-scrollbar { width: 0 !important }
 .mainArea {
 	transition: 50ms all;
 	width: -webkit-fill-available;
-
 	padding: 0;
 	opacity: 0;
 	overflow: scroll;
@@ -157,7 +159,6 @@ aside {
 .mainArea_full {
 	transition: 500ms all;
 	width: -webkit-fill-available;
-
 	padding: 0;
 	opacity: 1;
 	overflow: scroll;
@@ -205,7 +206,6 @@ aside {
     background-color: rgba(0,0,0,0.2);
     padding: 0;
     display: table-cell;
-    text-align: center;
     min-width: 40px;
     max-width: 40px;
     min-height: 40px;
@@ -223,6 +223,9 @@ header, div, span, p {
 }
 h1 {
 	text-indent: 20px;
+}
+aside, .navBar, span {
+	text-align: center;
 }
 .mainArea, .mainArea_full, .navBar, footer, header, html {
 	background-color: rgba(220,239,255,1);
