@@ -1,4 +1,76 @@
 /*DOM*/
+@media only screen and (orientation: landscape) {
+	aside {
+        display:inline-flex;
+        position: relative;
+        width:200px;
+        margin: 0 5px;
+	}
+
+    header, section, footer {
+        display:inline-flex;
+    }
+    .navBar {
+	    display: -webkit-box;
+	    min-width:100px;
+	    max-width:100px;
+	    height: -webkit-fill-available;
+    }
+    .mainArea {
+        height: -webkit-fill-available;
+
+    }
+    .mainArea_full {
+        height: -webkit-fill-available;
+
+
+    }
+    #dvContain div {
+	    display: block;
+    }
+    #dvContain {
+	    display: inline-flex;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+	aside {
+        display:flex;
+        position: relative;
+        width:-webkit-fill-available;
+        height: 250px;
+        margin: 5px 0;
+	}
+    header, section, footer {
+        display:block;
+    }
+    section {
+    	overflow: scroll;
+    }
+    section::-webkit-scrollbar { width: 0 !important }
+    .navBar {
+	    display: flex;
+	    min-width:-webkit-fill-available;
+	    max-width:-webkit-fill-available;
+	    height: min-content;
+    }
+    .mainArea {
+        height: -webkit-fill-available;
+
+    }
+    .mainArea_full {
+        height: -webkit-fill-available;
+ 
+    }
+    #dvContain div {
+	    display: block;
+
+    }
+    #dvContain {
+	    display: inline-flex;
+    }
+}
+
 html {
 	font-family: helvetica;
 	font-weight: 500;
@@ -13,6 +85,7 @@ header, section, footer {
 	transition: 200ms all;
 	width:-webkit-fill-available;
 	margin:none;
+    
 }
 header {
 	position: fixed;
@@ -24,7 +97,6 @@ header {
 	line-height:50px;
 }
 section {
-	display:inline-flex;
 	position: fixed;
 	padding: 0;
 	top:60px;
@@ -33,7 +105,6 @@ section {
 	font-size: 18px;
 }
 footer {
-	display:inline-flex;
 	position: fixed;
 	font-size: 10px;
 	font-weight: 800;
@@ -58,20 +129,18 @@ h1 {
 }
 a {color:black;}
 aside {
+    
+    box-shadow: 0 0 5px black inset;
 }
 /*CLASS*/
 .navBar {
-	display: -webkit-box;
-	min-width:100px;
-	max-width:100px;
-	height: -webkit-fill-available;
+	
 	overflow: scroll;
 }
 .navBar button {
 	width:-webkit-fill-available;
 	line-height:50px;
-	margin:2px 5px;
-	background-color: rgba(255,254,234,1);
+	background-color: rgba(215,224,244,1);
 }
 .navBar button:active {
 	background-color: rgba(0,0,0,.5);
@@ -80,7 +149,7 @@ aside {
 .mainArea {
 	transition: 50ms all;
 	width: -webkit-fill-available;
-	height: -webkit-fill-available;
+
 	padding: 0;
 	opacity: 0;
 	overflow: scroll;
@@ -88,7 +157,7 @@ aside {
 .mainArea_full {
 	transition: 500ms all;
 	width: -webkit-fill-available;
-	height: -webkit-fill-available;
+
 	padding: 0;
 	opacity: 1;
 	overflow: scroll;
@@ -99,14 +168,7 @@ aside {
 .mainItems {
     position: relative;
 }
-.mainItems aside {
-    position: relative;
-    display: block;
-    margin:80px 30px 0 30px;
-    width:-webkit-fill-available;
-    line-height: 200px;
-    box-shadow: 0 0 5px black inset;
-}
+
 .mainItems h1 {
     width: inherit;
 }
@@ -150,12 +212,8 @@ aside {
     max-height: 40px;
 }
 /*ID*/
-#dvContain {
-	display: inline-flex;
-}
-#dvContain div {
-	display: block;
-}
+
+
 /*MULTIS*/
 header, div, span, p {
     -webkit-user-select: none;
@@ -166,9 +224,9 @@ header, div, span, p {
 h1 {
 	text-indent: 20px;
 }
-.mainArea, .mainArea_full {
-	background-color: rgba(230,249,255,1);
+.mainArea, .mainArea_full, .navBar, footer, header, html {
+	background-color: rgba(220,239,255,1);
 }
 .navBar, footer, header, html {
-	background-image: url(../assets/sand.jpg);
+
 }

@@ -7,8 +7,11 @@ myUI = {
 		    section = createEle("section"),
 		    footer = createEle("footer"),
 		    navBar = createEle("nav"),
-		    mainArea = createEle("div");
+		    mainArea = createEle("div"),
+		    ads = createEle("aside");
         
+        ads.innerHTML = "ads here";
+
         navBar.className = "navBar";
         
         mainArea.className = "mainArea";
@@ -21,6 +24,7 @@ myUI = {
         
         section.append(navBar);
         section.append(mainArea);
+        section.append(ads);
 
         footer.innerHTML = "EHAWK LLC &copy; 2019";
 
