@@ -4,7 +4,7 @@
         display:inline-flex;
         position: relative;
         width:250px;
-        margin: 0 5px;
+        margin: 0;
 	}
 	section {
 		top:60px;
@@ -63,6 +63,7 @@
     section {
     	overflow: scroll;
     	top:113px;
+    	margin-bottom:5px;
     }
     section::-webkit-scrollbar { width: 0 !important }
     .navBar {
@@ -111,21 +112,17 @@ header, section, footer {
 	transition: 200ms all;
 	width:-webkit-fill-available;
 	margin:none;
-    
 }
 header {
 	position: fixed;
 	padding: 5px 0;
 	top:0;
     left:0;
-	
-    
 	line-height:50px;
 }
 section {
 	position: fixed;
 	padding: 0;
-	
     left:0;
     bottom:0;
 	font-size: 18px;
@@ -143,7 +140,6 @@ footer {
 }
 button {
 	border:none;
-	
 	cursor: pointer;
 }
 h1 {
@@ -159,11 +155,9 @@ aside {
     cursor:pointer;
 }
 textarea {
-
 }
 /*CLASS*/
 .navBar {
-	
 }
 .navBar button {
 	width:-webkit-fill-available;
@@ -183,14 +177,12 @@ textarea {
 	width: -webkit-fill-available;
 	padding: 0;
 	opacity: 0;
-
 }
 .mainArea_full {
 	transition: 500ms all;
 	width: -webkit-fill-available;
 	padding: 0;
 	opacity: 1;
-	
 }
 .mainArea::-webkit-scrollbar { width: 0 !important }
 .mainArea_full::-webkit-scrollbar { width: 0 !important }
