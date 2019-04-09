@@ -1,11 +1,10 @@
 # mask-site
-Here we will make a standard weblayout with javascript for a website that sells custom masks.
+<code>
+"Ride out the Holocene extinction in style!"
+</code>
 
-HTML5 - CSS - ES6
+<p>#custom designs</p>
+<p>#hand painted</p>
+<p>#respiratory devices optional</p>
 
-
-product features- 
-
-#custom designs
-#hand painted
-#respiratory devices optional
+<aside>HTML5 - CSS - ES6</aside>
