@@ -36,9 +36,7 @@
         overflow: scroll;
     }
     .mainItems div {
-        background-color: rgba(0,0,0,0.2);
         padding: 40px;
-        text-align: right;
         margin:0;
     }
     #dvContain div {
@@ -90,9 +88,8 @@
         height: -webkit-fill-available;
     }
     .mainItems div {
-        background-color: rgba(0,0,0,.2);
+
         padding: 40px;
-        text-align: right;
         margin:0;
     }
     #dvContain div {
@@ -201,7 +198,7 @@ textarea {
     width: inherit;
 }
 .mainItems p {
-    background-color: rgba(0,0,0,0.1);
+
     padding: 30px;
     margin:0;
 }
@@ -225,7 +222,7 @@ textarea {
 }
 
 .mainItems span {
-    background-color: rgba(0,0,0,0.2);
+
     padding: 0;
     display: table-cell;
     min-width: 40px;
@@ -257,4 +254,24 @@ button, textarea, input {
 }
 .navBar, footer, header, html {
 
+}
+p:nth-child(odd){
+	background-color: rgba(0,0,0,0.2);
+	text-align: right;
+}
+p:nth-child(even){
+	background-color: rgba(220,239,255,1);
+	text-align: left;
+}
+a {
+	display: inline-block;
+	text-decoration: none;
+	background-color: white;
+	box-shadow: 0 0 1px black;
+	padding: 16px;
+}
+input {
+	display: block;
+	text-indent: 8px;
+	width: 50%;
 }

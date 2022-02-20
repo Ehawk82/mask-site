@@ -80,23 +80,20 @@ myUI = {
 				x = aboutPage;
 			}
 			setTimeout(() => {
-			mainItems.innerHTML = x[0] + x[1] + x[2] + x[3] + x[4] + x[5];
-			
-			if (i === 0) {
-			}
-            if (i === 1) {
-			}
-			if (i === 2) {
-				cv.generateCVtool(mainArea);
-			}
-			if (i === 3) {
-				exUI.textareaSense();
-			}
-			if (i === 4) {
-			}
-
-			
-			
+				mainItems.innerHTML = x[0] + x[1] + x[2] + x[3] + x[4] + x[5];
+				
+				if (i === 0) {
+				}
+	            if (i === 1) {
+				}
+				if (i === 2) {
+					cv.generateCVtool(mainArea);
+				}
+				if (i === 3) {
+					exUI.textareaSense();
+				}
+				if (i === 4) {
+				}		
 			}, 530);
 			setTimeout(() => {
 				if (mainArea.className === "mainArea_full") {
