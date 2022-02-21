@@ -1,4 +1,4 @@
-var myUI, cv, exUI;
+var myUI;
 
 myUI = {
 	init: () => {
@@ -87,10 +87,10 @@ myUI = {
 	            if (i === 1) {
 				}
 				if (i === 2) {
-					cv.generateCVtool(mainArea);
+					
 				}
 				if (i === 3) {
-					exUI.textareaSense();
+					
 				}
 				if (i === 4) {
 				}		
@@ -106,28 +106,6 @@ myUI = {
     }
 };
 
-cv = {
-	generateCVtool: (mainItems) => {
-		var canvas = createEle("canvas"), canvasDiv = bySel("#canvasDiv");
-
-//free-draw program will be developed here
-
-		canvasDiv.append(canvas);
-	}
-};
-
-exUI = {
-	textareaSense: () => {
-		var txArea = byTag("textarea", 0);
-
-		txArea.onclick = exUI.textareaSelect(txArea);
-	},
-	textareaSelect: (txArea) => {
-		return () => {
-			txArea.innerHTML = "";
-		}
-	}
-};
 window.onload = () => {
 	myUI.init();
 };
