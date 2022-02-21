@@ -7,11 +7,9 @@ myUI = {
 		    section = createEle("section"),
 		    footer = createEle("footer"),
 		    navBar = createEle("nav"),
-		    mainArea = createEle("div"),
-		    ads = createEle("aside");
-        
-        ads.innerHTML = "ADS GO HERE";
+		    mainArea = createEle("div");
 
+		//
         navBar.className = "navBar";
         
         mainArea.className = "mainArea";
@@ -24,7 +22,7 @@ myUI = {
         
         section.append(navBar);
         section.append(mainArea);
-        section.append(ads);
+
 
         footer.innerHTML = "EHAWK LLC &copy; 2019";
 
@@ -80,20 +78,7 @@ myUI = {
 				x = aboutPage;
 			}
 			setTimeout(() => {
-				mainItems.innerHTML = x[0] + x[1] + x[2] + x[3] + x[4] + x[5];
-				
-				if (i === 0) {
-				}
-	            if (i === 1) {
-				}
-				if (i === 2) {
-					
-				}
-				if (i === 3) {
-					
-				}
-				if (i === 4) {
-				}		
+				mainItems.innerHTML = x[0] + x[1] + x[2] + x[3] + x[4] + x[5];	
 			}, 530);
 			setTimeout(() => {
 				if (mainArea.className === "mainArea_full") {
