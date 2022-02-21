@@ -10,7 +10,7 @@ myUI = {
 		    mainArea = createEle("div"),
 		    ads = createEle("aside");
         
-        ads.innerHTML = "ads here";
+        ads.innerHTML = "ADS GO HERE";
 
         navBar.className = "navBar";
         
