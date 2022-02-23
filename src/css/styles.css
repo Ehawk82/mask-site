@@ -267,3 +267,16 @@ input {
 	text-indent: 8px;
 	
 }
+img {
+	height: 145px;
+	width: 145px;
+}
+.lines {
+	text-align: left !important;
+
+}
+.lines img {
+	cursor: pointer;
+	box-shadow: 0 0 3px black;
+	margin: 5px;
+}

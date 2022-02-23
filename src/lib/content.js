@@ -1,5 +1,25 @@
 /*navStuffs*/
 navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
+var line1 = "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+
+var line2 = "<img src='./src/assets/logo1.png' />&nbsp;";
+    line2 += "<img src='./src/assets/logo1.png' />&nbsp;";
+
+var line3 = "<img src='./src/assets/logo1.png' />&nbsp;";
+    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
+
+var lineSale = "<img src='./src/assets/logo1.png' />&nbsp;";
+    lineSale += "<img src='./src/assets/logo1.png' />&nbsp;";
+    lineSale += "<img src='./src/assets/logo1.png' />&nbsp;";
 
 /*
 mainItems
@@ -17,10 +37,10 @@ var homePage = [
 var shopPage = [
 	"<h1>SHOP</h1>",
 	"<p>BROWSE OUR COLLECTION!</p>",
-	"<p>&nbsp;</p>",
-	"<p>&nbsp;</p>",
-	"<p>&nbsp;</p>", 
-	"<p>ON SALE!</p>"
+	"<p class='lines'>" + line1 + "</p>",
+	"<p class='lines'>" + line2 + "</p>",
+	"<p class='lines'>" + line3 + "</p>", 
+	"<p class='lines'>" + lineSale + "</p>"
 ];
 
 var designPage = [
@@ -37,7 +57,7 @@ var contactPage = [
 	"<p>If you have any questions, concerns, issues with the site, please use this information to contact the developer.</p>",
 	"<p>Be as specific as possible</p>",
 	"<p>If your email is regarding an order, please include your order number in the subject line</p>", 
-	"<p><a href='mailto:mrehawk82@gmail.com' target='_blank' onclick='window.open('your WS URL');'>SEND EMAIL</a></p>",
+	"<p><a href='tel:+17165638088'>CALL US</a>&nbsp;<a href='mailto:mrehawk82@gmail.com' target='_blank' onclick='window.open('your WS URL');'>SEND EMAIL</a></p>",
 	"<p>PLEASE BE PATIENT WHILE OUR TEAM CAN EVALUATE YOUR INPUT AND RESPOND</p>"
 ];
 
@@ -49,4 +69,5 @@ var aboutPage = [
 	"<p>WE WILL CONTACT YOU WHEN YOUR MASK IS READY</p>",
 	"<p>WE OFFER AVAILABLE IN-STOCK MASKS AT A DISCOUNT</p>"
 ];
+//
 
