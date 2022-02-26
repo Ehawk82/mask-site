@@ -1,10 +1,7 @@
 /*navStuffs*/
 navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
-var line1 = "<img src='./src/assets/logo1.png' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+
+var line1 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
     line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
     line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
 
@@ -12,10 +9,6 @@ var line2 = "<img src='./src/assets/logo1.png' />&nbsp;";
     line2 += "<img src='./src/assets/logo1.png' />&nbsp;";
 
 var line3 = "<img src='./src/assets/logo1.png' />&nbsp;";
-    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line3 += "<img src='./src/assets/logo1.png' />&nbsp;";
 
 var lineSale = "<img src='./src/assets/logo1.png' />&nbsp;";
     lineSale += "<img src='./src/assets/logo1.png' />&nbsp;";
@@ -31,7 +24,7 @@ var homePage = [
 	"<p>100% HANDMADE!</p>",
 	"<p>INDIVIDUAL SERVICE!</p>",
 	"<p>UNIQUE DESIGNS!</p>",
-	"<p>MONTHLY DEALS!</p>"
+	"<p>RANDOM DEALS!</p>"
 ];
 
 var shopPage = [
@@ -71,3 +64,27 @@ var aboutPage = [
 ];
 //
 
+const explodeImg = (x,body) => {
+	var newThingy = createEle("img"),
+	    newThingyContainer = createEle("div"),
+	    xOut = createEle("span");
+
+	//
+	xOut.innerHTML = "X";
+	xOut.onclick = doDelete(newThingyContainer);
+	xOut.className = "xOut";
+
+	newThingy.innerHTML = "&nbsp;";
+	newThingy.className = "newThingy";
+	newThingy.src = x.src;
+
+	newThingyContainer.className = "newThingyContainer";
+	newThingyContainer.append(newThingy,xOut);
+
+	body.append(newThingyContainer);
+};
+const doDelete = (x) => {
+	return () => {
+		x.remove();
+	}
+};

@@ -142,7 +142,8 @@ h1 {
 	margin:0;
 	width:90%;
     padding: 20px 5%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.6);
+    color: white;
 }
 a {color:black;}
 
@@ -160,7 +161,8 @@ textarea {
 	background-color: rgba(255,255,255,.4);
 }
 .navBar button:active {
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.6);
+	color: white;
 }
 
 .navBar::-webkit-scrollbar { width: 0 !important }
@@ -248,7 +250,8 @@ background-color: rgba(215,224,244,1);
 
 /*SPECIAL CASES*/
 p:nth-child(odd){
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.6);
+	color: white;
 	text-align: right;
 }
 p:nth-child(even){
@@ -279,4 +282,38 @@ img {
 	cursor: pointer;
 	box-shadow: 0 0 3px black;
 	margin: 5px;
+}
+.newThingyContainer {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	background-color: rgba(0,0,0,.5);
+	z-index: 10;
+	left: 0;
+	top: 0;
+}
+.newThingy {
+	position: absolute;
+	display: block;
+	margin: 0 25vw ;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 50vw;
+	height: 100vh;
+
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.xOut {
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	background-color: transparent;
+	z-index: 11;
+	color: white;
+	position: fixed;
+	display: block;
 }
