@@ -1,18 +1,27 @@
+/*dataStuffs*/
+items = {
+	"1a": {price:29.99,name:"skull"},
+	"2a": {price:29.99,name:"skull"},
+	"3a": {price:29.99,name:"skull"},
+	"1b": {price:19.99,name:"skull"},
+	"2b": {price:19.99,name:"skull"},
+	"1c": {price:79.99,name:"skull"}
+};
 /*navStuffs*/
 navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
 
-var line1 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+var line1 = "<img data-index='1a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    line1 += "<img data-index='2a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    line1 += "<img data-index='3a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var line2 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    line2 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+var line2 = "<img data-index='1b' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    line2 += "<img data-index='2b' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var line3 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+var line3 = "<img data-index='1c' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var lineSale = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    lineSale += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    lineSale += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+var lineSale = "<img data-index='1a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    lineSale += "<img data-index='1b' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    lineSale += "<img data-index='1c' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
 /*
 mainItems
@@ -67,9 +76,14 @@ var aboutPage = [
 const explodeImg = (x,body) => {
 	var newThingy = createEle("img"),
 	    newThingyContainer = createEle("div"),
-	    xOut = createEle("span");
+	    xOut = createEle("span"),
+	    purchaseBtn = createEle("button");
 
 	//
+	purchaseBtn.innerHTML = "BUY!";
+	purchaseBtn.className = "purchaseBtn";
+	purchaseBtn.onclick = purchaseMask(x,newThingyContainer,body);
+
 	xOut.innerHTML = "X";
 	xOut.onclick = doDelete(newThingyContainer);
 	xOut.className = "xOut";
@@ -79,9 +93,26 @@ const explodeImg = (x,body) => {
 	newThingy.src = x.src;
 
 	newThingyContainer.className = "newThingyContainer";
-	newThingyContainer.append(newThingy,xOut);
+	newThingyContainer.append(newThingy,purchaseBtn,xOut);
 
 	body.append(newThingyContainer);
+};
+const purchaseMask = (x,newThingyContainer,body) => {
+	return () => {
+		var d = x.getAttribute("data-index"),
+		    purchasePage = createEle("div"),
+		    xOut = createEle("span");
+		//
+		xOut.innerHTML = "X";
+		xOut.onclick = doDelete(purchasePage);
+		xOut.className = "xOut";
+
+		purchasePage.innerHTML = "Purchasing " + d + "... <br/> COST: " + items[d].price;
+		purchasePage.className = "purchasePage";
+		purchasePage.append(xOut);
+		newThingyContainer.remove();
+		body.append(purchasePage);
+	}
 };
 const doDelete = (x) => {
 	return () => {
