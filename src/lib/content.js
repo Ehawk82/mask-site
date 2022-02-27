@@ -1,11 +1,11 @@
 /*dataStuffs*/
 items = {
-	"1a": {price:29.99,name:"skull"},
-	"2a": {price:29.99,name:"skull"},
-	"3a": {price:29.99,name:"skull"},
-	"1b": {price:19.99,name:"skull"},
-	"2b": {price:19.99,name:"skull"},
-	"1c": {price:79.99,name:"skull"}
+	"1a": {price:29.99,name:"skull",sale:true},
+	"2a": {price:29.99,name:"skull",sale:false},
+	"3a": {price:29.99,name:"skull",sale:false},
+	"1b": {price:19.99,name:"skull",sale:true},
+	"2b": {price:19.99,name:"skull",sale:false},
+	"1c": {price:79.99,name:"skull",sale:true}
 };
 /*navStuffs*/
 navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
