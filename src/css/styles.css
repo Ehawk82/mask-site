@@ -288,7 +288,7 @@ img {
 	width: 100vw;
 	height: 100vh;
 	display: block;
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.8);
 	z-index: 10;
 	left: 0;
 	top: 0;
@@ -296,23 +296,24 @@ img {
 .newThingy {
 	position: absolute;
 	display: block;
-	margin: 0 25vw ;
+	margin: 0 25vw;
 	z-index: 10;
 	left: 0;
 	top: 0;
 	width: 50vw;
-	height: 100vh;
-
+	height: auto;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .xOut {
-	top: 0;
-	right: 0;
+	top: 2vw;
+	right: 5vw;
 	width: 20px;
 	height: 20px;
+	font-size: 4vw;
 	background-color: transparent;
 	z-index: 11;
+	cursor: pointer;
 	color: white;
 	position: fixed;
 	display: block;

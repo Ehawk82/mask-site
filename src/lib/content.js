@@ -2,17 +2,17 @@
 navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
 
 var line1 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
-    line1 += "<img src='./src/assets/logo1.png' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    line1 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var line2 = "<img src='./src/assets/logo1.png' />&nbsp;";
-    line2 += "<img src='./src/assets/logo1.png' />&nbsp;";
+var line2 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    line2 += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var line3 = "<img src='./src/assets/logo1.png' />&nbsp;";
+var line3 = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
-var lineSale = "<img src='./src/assets/logo1.png' />&nbsp;";
-    lineSale += "<img src='./src/assets/logo1.png' />&nbsp;";
-    lineSale += "<img src='./src/assets/logo1.png' />&nbsp;";
+var lineSale = "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    lineSale += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
+    lineSale += "<img src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
 
 /*
 mainItems
