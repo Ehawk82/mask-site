@@ -1,14 +1,14 @@
 /*dataStuffs*/
 items = {
-	"1a": {price:29.99,name:"skull",sale:true},
-	"2a": {price:29.99,name:"skull",sale:false},
-	"3a": {price:29.99,name:"skull",sale:false},
-	"1b": {price:19.99,name:"skull",sale:true},
-	"2b": {price:19.99,name:"skull",sale:false},
-	"1c": {price:79.99,name:"skull",sale:true}
+	"1a": {price:29.99,name:"Skull",sale:true,inStock:true},
+	"2a": {price:29.99,name:"Death",sale:false,inStock:true},
+	"3a": {price:29.99,name:"Demon",sale:false,inStock:true},
+	"1b": {price:19.99,name:"Toon",sale:true,inStock:true},
+	"2b": {price:19.99,name:"Zombie",sale:false,inStock:true},
+	"1c": {price:79.99,name:"Purge Night",sale:true,inStock:true}
 };
 /*navStuffs*/
-navText = ["HOME", "SHOP", "DESIGN", "CONTACT", "ABOUT"];
+navText = ["HOME","SHOP","DESIGN","CONTACT","ABOUT"];
 
 var line1 = "<img data-index='1a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
     line1 += "<img data-index='2a' src='./src/assets/logo1.png' onclick='explodeImg(this,body)' />&nbsp;";
@@ -50,7 +50,7 @@ var designPage = [
 	"<p>MAKE YOUR OWN!</p>",
 	"<p>DESCRIPTION</p>", 
 	"<p><textarea placeholder='PLEASE MAKE A DETAILED EXPLAINATION OF YOUR DESIGN!'></textarea></p>",
-	"<p><input placeholder='NAME YOUR MASK!' /></p>", 
+	"<p><input placeholder=\"What's your budget?\" /></p>", 
 	"<p><a>ORDER NOW</a></p>"
 ];
 
@@ -78,7 +78,6 @@ const explodeImg = (x,body) => {
 	    newThingyContainer = createEle("div"),
 	    xOut = createEle("span"),
 	    purchaseBtn = createEle("button");
-
 	//
 	purchaseBtn.innerHTML = "BUY!";
 	purchaseBtn.className = "purchaseBtn";
@@ -107,7 +106,7 @@ const purchaseMask = (x,newThingyContainer,body) => {
 		xOut.onclick = doDelete(purchasePage);
 		xOut.className = "xOut";
 
-		purchasePage.innerHTML = "Purchasing " + d + "... <br/> COST: " + items[d].price;
+		purchasePage.innerHTML = "Purchasing " + d + "<br/> COST: " + items[d].price + "<br/> Name: " + items[d].name + "<br/> In Stock? " + items[d].inStock + "<br/> On Sale? " + items[d].sale;
 		purchasePage.className = "purchasePage";
 		purchasePage.append(xOut);
 		newThingyContainer.remove();

@@ -31,7 +31,7 @@
     }
     .mainItems div {
         padding: 40px;
-        margin:0;
+        margin: 0;
     }
     #dvContain div {
 	    display: block;
@@ -190,7 +190,7 @@ textarea {
 }
 .mainItems p {
 
-    padding: 30px;
+    padding: 20px;
     margin:0;
 }
 .mainItems textarea {
