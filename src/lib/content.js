@@ -95,8 +95,8 @@ const explodeImg = (x,body) => {
 	newThingyContainer.append(newThingy,purchaseBtn,xOut);
 
 	body.append(newThingyContainer);
-};
-const purchaseMask = (x,newThingyContainer,body) => {
+},
+purchaseMask = (x,newThingyContainer,body) => {
 	return () => {
 		var d = x.getAttribute("data-index"),
 		    purchasePage = createEle("div"),
@@ -110,10 +110,11 @@ const purchaseMask = (x,newThingyContainer,body) => {
 		purchasePage.className = "purchasePage";
 		purchasePage.append(xOut);
 		newThingyContainer.remove();
+
 		body.append(purchasePage);
 	}
-};
-const doDelete = (x) => {
+},
+doDelete = (x) => {
 	return () => {
 		x.remove();
 	}
