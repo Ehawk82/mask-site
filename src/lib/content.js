@@ -1,4 +1,5 @@
 /*dataStuffs*/
+
 items = {
 	"1a": {price:29.99,name:"Skull",sale:true,inStock:true},
 	"2a": {price:29.99,name:"Death",sale:false,inStock:true},
@@ -49,9 +50,9 @@ var designPage = [
 	"<h1>DESIGN</h1>",
 	"<p>MAKE YOUR OWN!</p>",
 	"<p>DESCRIPTION</p>", 
-	"<p><textarea placeholder='PLEASE MAKE A DETAILED EXPLAINATION OF YOUR DESIGN!'></textarea></p>",
+	"<p><textarea id='myVariable' placeholder='PLEASE MAKE A DETAILED EXPLAINATION OF YOUR DESIGN!'></textarea></p>",
 	"<p><input placeholder=\"What's your budget?\" /></p>", 
-	"<p><a>ORDER NOW</a></p>"
+	"<p><a href='mailto:mrehawk82@gmail.com?Subject=RE:%20Holo%20Ex' target='_blank' onclick='window.open('your WS URL');'>ORDER NOW</a></p>"
 ];
 
 var contactPage = [
@@ -59,7 +60,7 @@ var contactPage = [
 	"<p>If you have any questions, concerns, issues with the site, please use this information to contact the developer.</p>",
 	"<p>Be as specific as possible</p>",
 	"<p>If your email is regarding an order, please include your order number in the subject line</p>", 
-	"<p><a href='tel:+17165638088'>CALL US</a>&nbsp;<a href='mailto:mrehawk82@gmail.com' target='_blank' onclick='window.open('your WS URL');'>SEND EMAIL</a></p>",
+	"<p><a href='tel:+17165638088'>CALL US</a>&nbsp;<a href='mailto:mrehawk82@gmail.com?Subject=RE:%20Holo%20Ex' target='_blank' onclick='window.open('your WS URL');'>SEND EMAIL</a></p>",
 	"<p>PLEASE BE PATIENT WHILE OUR TEAM CAN EVALUATE YOUR INPUT AND RESPOND</p>"
 ];
 
